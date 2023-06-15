@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
 # original copy from https://djangosnippets.org/snippets/773/
 
 import functools
 import math
 
 from django.conf import settings
-from django.core.paginator import (InvalidPage, Page, Paginator,
-                                   QuerySetPaginator)
+from django.core.paginator import InvalidPage, Page, Paginator
 
 __all__ = (
     'InvalidPage',
@@ -47,7 +45,7 @@ class ExPaginator(Paginator):
 
     def __init__(self, *args, **kwargs):
         self.softlimit = kwargs.pop('softlimit', getattr(settings, 'ALDRYN_COMMON_PAGINATION_SOFTLIMIT', True))
-        super(ExPaginator, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def _ensure_int(self, num, e):
         # see Django #7307
@@ -58,7 +56,7 @@ class ExPaginator(Paginator):
 
     def page(self, number):
         try:
-            return super(ExPaginator, self).page(number)
+            return super().page(number)
         except InvalidPage as error:
             number = self._ensure_int(number, error)
             if number > self.num_pages and self.softlimit:
@@ -204,14 +202,14 @@ class DiggPaginator(ExPaginator):
         self.padding = kwargs.pop('padding', min(4, max_padding))
         if self.padding > max_padding:
             raise ValueError('padding too large for body (max %d)' % max_padding)
-        super(DiggPaginator, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def page(self, number, *args, **kwargs):
         """Return a standard ``Page`` instance with custom, digg-specific
         page ranges attached.
         """
 
-        page = super(DiggPaginator, self).page(number, *args, **kwargs)
+        page = super().page(number, *args, **kwargs)
         number = int(number)  # we know this will work
 
         # easier access
@@ -296,7 +294,7 @@ class DiggPage(Page):
         )
 
 
-class QuerySetDiggPaginator(DiggPaginator, QuerySetPaginator):
+class QuerySetDiggPaginator(DiggPaginator):
     pass
 
 

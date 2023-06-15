@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
 
 
 def noop_gettext(s):
@@ -33,7 +31,7 @@ HELPER_SETTINGS = {
             {
                 'public': True,
                 'code': 'en',
-                'fallbacks': [u'de'],
+                'fallbacks': ['de'],
                 'hide_untranslated': False,
                 'name': gettext('en'),
                 'redirect_on_fallback': True,
@@ -41,7 +39,7 @@ HELPER_SETTINGS = {
             {
                 'public': True,
                 'code': 'de',
-                'fallbacks': [u'en'],
+                'fallbacks': ['en'],
                 'hide_untranslated': False,
                 'name': gettext('de'),
                 'redirect_on_fallback': True,
@@ -69,8 +67,8 @@ HELPER_SETTINGS = {
 
 
 def run():
-    from djangocms_helper import runner
-    runner.run('aldryn_common', extra_args=[])
+    from app_helper import runner
+    runner.cms('aldryn_common', extra_args=[])
 
 
 if __name__ == "__main__":

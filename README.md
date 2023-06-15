@@ -1,12 +1,12 @@
-**Deprecated**
-
-This project is no longer supported.
-
-Divio will undertake no further development or maintenance of this project. If you are interested in continuing to develop it, use the fork functionality from GitHub. We are not able to transfer ownership of the repository to another party.
+![Continuation of the deprecated project "Divio Aldryn common"](https://img.shields.io/badge/Continuation-Divio_Aldryn_Common-blue)
+![Pypi package](https://img.shields.io/pypi/v/djangocms-aldryn-common.svg?link=https%3A%2F%2Fpypi.python.org%2Fpypi%2Fdjangocms-aldryn-common)
+![Status](https://img.shields.io/pypi/status/djangocms-aldryn-common.svg?link=https%3A%2F%2Fpypi.python.org%2Fpypi%2Fdjangocms-aldryn-common)
+![Python versions](https://img.shields.io/pypi/pyversions/djangocms-aldryn-common.svg?link=https%3A%2F%2Fpypi.python.org%2Fpypi%2Fdjangocms-aldryn-common)
+![License](https://img.shields.io/pypi/l/djangocms-aldryn-common.svg?link=https%3A%2F%2Fpypi.python.org%2Fpypi%2Fdjangocms-aldryn-common)
 
 # Aldryn Common
 
-![build status](https://img.shields.io/travis/aldryn/aldryn-common.svg) ![coverage](https://img.shields.io/coveralls/aldryn/aldryn-common.svg) ![PyPI version](https://img.shields.io/pypi/v/aldryn-common.svg)
+Continuation of the deprecated project [Divio Aldryn Common](https://github.com/divio/aldryn-common).
 
 Aldryn Common is a library of helpful utilities for packages in the [Aldryn](http://aldryn.com) ecosystem, and is
 also aimed at developers of [django CMS](http://django-cms.org) projects.
@@ -23,7 +23,6 @@ They include tools for:
 as well as a variety of helpful templatetags and more.
 
 ## Settings:
+
 * ``ALDRYN_COMMON_PAGINATION_SOFTLIMIT``: Soft-limiting search results. If True, querying a page number larger than max.
  will not fail, but instead return the last available page. Default is True.
-
-Requires [Aldryn Boilerplates](https://github.com/aldryn/aldryn-boilerplates)

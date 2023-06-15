@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # from http://djangosnippets.org/snippets/690/
 import re
 
@@ -39,11 +38,11 @@ def unique_slugify(instance, value, slug_field_name='slug', queryset=None,
     nxt = 2
     while not slug or queryset.filter(**{slug_field_name: slug}):
         slug = original_slug
-        end = '%s%s' % (slug_separator, nxt)
+        end = f'{slug_separator}{nxt}'
         if slug_len and len(slug) + len(end) > slug_len:
             slug = slug[:slug_len - len(end)]
             slug = _slug_strip(slug, slug_separator)
-        slug = '%s%s' % (slug, end)
+        slug = f'{slug}{end}'
         nxt += 1
 
     setattr(instance, slug_field.attname, slug)
@@ -70,5 +69,5 @@ def _slug_strip(value, separator='-'):
     if separator:
         if separator != '-':
             re_sep = re.escape(separator)
-        value = re.sub(r'^%s+|%s+$' % (re_sep, re_sep), '', value)
+        value = re.sub(fr'^{re_sep}+|{re_sep}+$', '', value)
     return value

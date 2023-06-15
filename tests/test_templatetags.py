@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django.template import Context, Template
 from django.test import TestCase
 
@@ -24,4 +22,4 @@ class QueryStringTagTest(TestCase):
         rendered_args = rendered.lstrip('?').split('&')
         expected_args = [
             'year=2011', 'tag=a', 'tag=b', 'tag=c', 'tag=d', 'month=4']
-        self.assertEquals(sorted(expected_args), sorted(rendered_args))
+        self.assertEqual(sorted(expected_args), sorted(rendered_args))

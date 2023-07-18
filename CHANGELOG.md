@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2023-07-18
+
+### Changed
+
+- Update setup long description and license.
+
+## [2.0.0] - 2023-07-18
+
 ### Added
 
 - CHANGELOG.md.
@@ -46,7 +54,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.3] - 2014-03-03
 
 
-[unreleased]: https://github.com/CZ-NIC/djangocms-aldryn-common/compare/1.0.5...update-to-new-version
+[unreleased]: https://github.com/CZ-NIC/djangocms-aldryn-common/compare/2.0.1...master
+[2.0.1]: https://github.com/CZ-NIC/djangocms-aldryn-common/compare/2.0.0...2.0.1
+[2.0.0]: https://github.com/CZ-NIC/djangocms-aldryn-common/compare/1.0.5...2.0.0
 [1.0.5]: https://github.com/divio/aldryn-common/compare/1.0.4...1.0.5
 [1.0.4]: https://github.com/divio/aldryn-common/compare/1.0.3...1.0.4
 [1.0.3]: https://github.com/divio/aldryn-common/compare/1.0.2...1.0.3

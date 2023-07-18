@@ -31,6 +31,7 @@ setup(
     version=__version__,
     description='Common utilities',
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     author='Divio AG',
     author_email='info@divio.ch',
     url='https://github.com/CZ-NIC/djangocms-aldryn-common',
